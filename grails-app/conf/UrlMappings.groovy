@@ -9,5 +9,14 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
+
+        "/phones/phones.json" {
+            controller = "phones"
+        }
+
+        "/phones/${phoneId}.json" {
+            controller = "phones"
+            action = "showPhone"
+        }
 	}
 }
