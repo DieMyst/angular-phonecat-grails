@@ -7,8 +7,11 @@ import ru.hobbystart.diemyst.Display
 import ru.hobbystart.diemyst.Hardware
 import ru.hobbystart.diemyst.Phone
 import ru.hobbystart.diemyst.PhoneDetail
+import ru.hobbystart.diemyst.Role
 import ru.hobbystart.diemyst.SizeAndWeight
 import ru.hobbystart.diemyst.Storage
+import ru.hobbystart.diemyst.User
+import ru.hobbystart.diemyst.UserRole
 
 class BootStrap {
 
@@ -89,6 +92,15 @@ class BootStrap {
 
             }
         }
+        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
+
+        def user = new User(username: 'admin', password: 'admin', enabled: true).save(flush: true)
+
+        UserRole.create(user, adminRole, true)
+
+        assert User.count() == 1
+        assert Role.count() == 1
+        assert UserRole.count() == 1
     }
 
     def destroy = {

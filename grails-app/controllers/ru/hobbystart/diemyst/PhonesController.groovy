@@ -1,9 +1,11 @@
 package ru.hobbystart.diemyst
 
 import grails.converters.JSON
+import grails.plugin.springsecurity.annotation.Secured
 import ru.hobbystart.diemyst.Phone
 import ru.hobbystart.diemyst.PhoneDetail
 
+@Secured('permitAll')
 class PhonesController {
 
     def index() {
