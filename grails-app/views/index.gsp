@@ -15,6 +15,9 @@
 </head>
 
 <body>
+<sec:ifNotLoggedIn>
+    <g:link controller='login' action='auth'>Login</g:link>
+</sec:ifNotLoggedIn>
 <div class="view-container" ng-app="phonecatApp">
     <div ng-view class="view-frame"></div>
 </div>

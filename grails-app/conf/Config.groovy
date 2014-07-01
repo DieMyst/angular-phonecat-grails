@@ -124,16 +124,5 @@ grails.plugin.springsecurity.authority.className = 'ru.hobbystart.diemyst.Role'
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-    '/#/**':                          ['permitAll'],
-    '/phones/**':                     ['permitAll'],
-    '/phones':                        ['permitAll'],
-    '/#/phones':                      ['permitAll'],
-    '/#/phones/**':                   ['permitAll'],
-	'/index':                         ['permitAll'],
-	'/index.gsp':                     ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/':                              ['permitAll']
 ]
