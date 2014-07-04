@@ -6,22 +6,14 @@
 <!--[if IE 9 ]>
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="layout" content="main" />
     <title>Google Phone Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <r:require module="angular"/>
-    <r:layoutResources />
 </head>
 
 <body>
-<sec:ifNotLoggedIn>
-    <g:link controller='login' action='auth'>Login</g:link>
-</sec:ifNotLoggedIn>
 <div class="view-container" ng-app="phonecatApp">
     <div ng-view class="view-frame"></div>
 </div>
-<r:layoutResources />
 </body>
 
 </html>
